@@ -16,7 +16,7 @@ const mp_obj_fun_builtin_fixed_t modion_keyboard_keydown_obj = {
   {(mp_fun_0_t)modion_keyboard_keydown}
 };
 
-STATIC const mp_rom_map_elem_t modion_module_globals_table[] = {
+extern "C" const mp_rom_map_elem_t modion_module_globals_table[] = {
   { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_ion) },
   { MP_ROM_QSTR(MP_QSTR_keydown), MP_ROM_PTR(&modion_keyboard_keydown_obj) },
   { MP_ROM_QSTR(MP_QSTR_KEY_LEFT), MP_OBJ_NEW_SMALL_INT(Ion::Keyboard::Key::Left) },
@@ -65,6 +65,8 @@ STATIC const mp_rom_map_elem_t modion_module_globals_table[] = {
   { MP_ROM_QSTR(MP_QSTR_KEY_EE), MP_OBJ_NEW_SMALL_INT(Ion::Keyboard::Key::EE) },
   { MP_ROM_QSTR(MP_QSTR_KEY_ANS), MP_OBJ_NEW_SMALL_INT(Ion::Keyboard::Key::Ans) },
   { MP_ROM_QSTR(MP_QSTR_KEY_EXE), MP_OBJ_NEW_SMALL_INT(Ion::Keyboard::Key::EXE) },
+  
+  { MP_ROM_QSTR(MP_QSTR_file), (mp_obj_t)&file_type}
 };
 
 STATIC MP_DEFINE_CONST_DICT(modion_module_globals, modion_module_globals_table);
